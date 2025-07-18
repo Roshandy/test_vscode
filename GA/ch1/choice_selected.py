@@ -32,12 +32,11 @@ def choice_selected(old_answer, number_set):
                         temp.append(old_answer[k])
         # 生成0~6之间的随机整数
         rand = random.randint(0, 6)
+        # 优化部分（a,b）:设计随机的a和b使交叉繁殖后的数据更加随机化
         a = random.randint(0,len(temp)-1)
         b = random.randint(0,len(temp)-1)
-        if b == a:
-            b = a + 1
-        temp_a = temp[0][:rand] + temp[1][rand:rand+3] + temp[0][rand+3:]
-        temp_b = temp[1][:rand] + temp[0][rand:rand+3] + temp[1][rand+3:]
+        temp_a = temp[a][:rand] + temp[b][rand:rand+3] + temp[a][rand+3:]
+        temp_b = temp[b][:rand] + temp[a][rand:rand+3] + temp[b][rand+3:]
         result.append(temp_a)
         result.append(temp_b)
     return result
