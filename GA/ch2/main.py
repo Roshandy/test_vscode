@@ -2,8 +2,10 @@
 
 import numpy as np
 import math
-from objective_function import f
 from flag_limit_area import flag_limit_area
+from get_fitness import get_fitness
+from select_animal import select_animal
+from crossover_variation import crossover_and_variation
 
 # 初始化参数
 DNA_bit = 13 # 一个DNA的二进制位数,(第一维表示符号位)
@@ -29,3 +31,10 @@ while(num):
     else:
         animals[pos] = np.random.randint(2, size=(1, DNA_bit * DNA_num))
 
+# 模拟进化选择generator_n轮    
+for i in range(generator_n):
+    fitness_score = get_fitness(animals)
+    selected_animals = select_animal(animals, fitness_score, animal_num)
+    animals = crossover_and_variation(selected_animals, animals, cross_rate, variation_rate, animal_num, DNA_bit, DNA_num)
+
+get_result(animals)

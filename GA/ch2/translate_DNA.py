@@ -12,7 +12,6 @@ def translate_DNA(animal, DNA_bit, Int_bit, DNA_num):
 
     输出:
     x,y
-
     '''
     def DNA2t10(DNA):
         '''
