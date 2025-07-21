@@ -6,6 +6,7 @@ from flag_limit_area import flag_limit_area
 from get_fitness import get_fitness
 from select_animal import select_animal
 from crossover_variation import crossover_and_variation
+from get_result import get_result
 
 # 初始化参数
 DNA_bit = 13 # 一个DNA的二进制位数,(第一维表示符号位)
