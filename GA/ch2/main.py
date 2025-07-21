@@ -34,8 +34,8 @@ while(num):
 
 # 模拟进化选择generator_n轮    
 for i in range(generator_n):
-    fitness_score = get_fitness(animals)
+    fitness_score = get_fitness(animals, limit_area, DNA_bit, Int_bit, DNA_num)
     selected_animals = select_animal(animals, fitness_score, animal_num)
-    animals = crossover_and_variation(selected_animals, animals, cross_rate, variation_rate, animal_num, DNA_bit, DNA_num)
+    animals = crossover_and_variation(selected_animals, cross_rate, variation_rate, animal_num, DNA_bit, DNA_num)
 
-get_result(animals)
+get_result(animals,  limit_area, DNA_bit, Int_bit, DNA_num)
