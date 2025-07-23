@@ -1,9 +1,9 @@
 genetic_algorithm/
 ├── include/
-│   ├── Individual.h
-│   ├── GeneticAlgorithm.h
-│   ├── ObjectiveFunction.h
-│   └── Constants.h
+│   ├── Individual.hpp
+│   ├── GeneticAlgorithm.hpp
+│   ├── ObjectiveFunction.hpp
+│   └── Constants.hpp
 ├── src/
 │   ├── Individual.cpp
 │   ├── GeneticAlgorithm.cpp
